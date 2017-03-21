@@ -17,6 +17,9 @@ public class Element {
     @SerializedName("yPosition")
     @Expose
     private Integer yPosition;
+    @SerializedName("r")
+    @Expose
+    private Integer radius;
     @SerializedName("width")
     @Expose
     private Integer width;
@@ -51,6 +54,14 @@ public class Element {
         this.yPosition = yPosition;
     }
 
+    public Integer getRadius() {
+        return radius;
+    }
+
+    public void setRadius(Integer radius) {
+        this.radius = radius;
+    }
+
     public Integer getWidth() {
         return width;
     }
@@ -67,12 +78,13 @@ public class Element {
         this.height = height;
     }
 
-    public int getColor() {
-        return Color.parseColor(color);
+    public String getColor() {
+        return this.color;
     }
 
-    public void setColor(Color color) {
-        this.color = color.toString();
+    public void setColor(String colorString) {
+        this.color = colorString;
     }
+
 
 }
